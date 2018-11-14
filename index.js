@@ -5,8 +5,11 @@ const app = express();
 //Connect to MongoDB Database
 const mongoose = require('mongoose');
 
-//mongoose.connect('mongodb+srv://' + process.env.MONGODB_USERNAME + ':' + process.env.MONGODB_PASSWORD + '@cluster0-g5078.mongodb.net/movieDB?retryWrites=true', {useNewUrlParser : true});
-mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser : true});
+//For MongoDB Atlas - Cloud Hosting
+mongoose.connect('mongodb+srv://' + process.env.MONGODB_USERNAME + ':' + process.env.MONGODB_PASSWORD + '@cluster0-g5078.mongodb.net/movieDB?retryWrites=true', {useNewUrlParser : true});
+
+//For Local MongoDB Database
+//mongoose.connect('mongodb://localhost:27017/test', {useNewUrlParser : true});
 
 const db = mongoose.connection;
 
