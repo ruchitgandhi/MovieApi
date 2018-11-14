@@ -49,3 +49,5 @@ MongoDB cloud hosting using MongoDB Atlas
 
 ### References:
 https://mixmax.com/blog/api-paging-built-the-right-way/
+
+https://code.tutsplus.com/tutorials/full-text-search-in-mongodb--cms-24835
