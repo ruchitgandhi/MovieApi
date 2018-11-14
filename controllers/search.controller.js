@@ -44,7 +44,7 @@ exports.searchByName = function (req, res) {
                 else if(totalPages > requestedPage){
                     res.send({"results" : results, "nextPage" : requestedPage+1});    
                 }
-                else if(totalPages > requestedPage){
+                else if(requestedPage > 1){
                     res.send({"results" : results, "previousPage" : requestedPage-1});    
                 }
                 else{
