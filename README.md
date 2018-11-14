@@ -12,6 +12,12 @@ REST API for fetching movie and tv series
    
    Both have their advantages and disadvantages which can be read here - https://www.codementor.io/arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr
 
+2) Express-generator to generate sample project using nodejs and express.
+
+3) Separating the application into routes, controllers, model, and views - MVC methodology.
+
+4) Usage of package.json file for managing dependencies as well as starting app on the Heroku cloud.
+
 ## Server Cloud Hosting
 Node.js server hosted on Heroku
  
