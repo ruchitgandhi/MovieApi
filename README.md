@@ -44,3 +44,8 @@ MongoDB cloud hosting using MongoDB Atlas
 1) Hosting Database on the cloud
 2) Used text-based indexing to optimize search queries
 3) Mongo Atlas has option for IP whitelisting - meaning only specific ip addresses are allowed to query the database.
+
+
+
+### References:
+https://mixmax.com/blog/api-paging-built-the-right-way/
