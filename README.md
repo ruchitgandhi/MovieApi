@@ -1,7 +1,7 @@
 # MovieApi
 REST API for fetching movie and tv series
 
-## Cloud Hosting
+## Server Cloud Hosting
 Node.js server hosted on Heroku
  
 #### Learnings:
@@ -15,3 +15,10 @@ Node.js server hosted on Heroku
   $ heroku ps:scale web=0
 
 2) Utilizing config variables on Heroku to protect credentials from being mentioned in files
+
+## Database Cloud Hosting
+MongoDB cloud hosting using MongoDB Atlas
+
+#### Learnings:
+1) Used text-based indexing to optimize search queries
+2) Mongo Atlas has option for IP whitelisting - meaning only specific ip addresses are allowed to query the database.
