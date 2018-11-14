@@ -53,3 +53,5 @@ http://www.omdbapi.com/
 https://mixmax.com/blog/api-paging-built-the-right-way/
 
 https://code.tutsplus.com/tutorials/full-text-search-in-mongodb--cms-24835
+
+https://www.kompulsa.com/how-to-get-data-from-an-api-and-save-it-using-node-js-and-mongoose/
