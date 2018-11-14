@@ -1,0 +1,16 @@
+{
+  "name": "MovieApi",
+  "version": "1.0.0",
+  "description": "REST Api to fetch movies and tv shows",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "Ruchit Gandhi",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongo-cursor-pagination": "^7.1.0",
+    "mongoose": "^5.3.12"
+  }
+}
