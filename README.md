@@ -1,12 +1,24 @@
 # MovieApi
 REST API for fetching movie and tv series
 
+## API Development
+
+#### Learnings:
+1) There are multiple ways to do Pagination:
+   
+   a) Using limit and skip paramters in MongoDB queries (I have used this!).
+   
+   b) Using cursor based pagination, where id of the last returned result is remembered.
+   
+   Both have their advantages and disadvantages which can be read here - https://www.codementor.io/arpitbhayani/fast-and-efficient-pagination-in-mongodb-9095flbqr
+
 ## Server Cloud Hosting
 Node.js server hosted on Heroku
  
 #### Learnings:
-1) If you need to temporarily disable access to your Heroku app (for example, to perform a large migration), you can enable Heroku’s built-in maintenance mode. While in maintenance mode, your app serves a static maintenance page to all visitors.
-2) Utilizing config variables on Heroku to protect credentials from being mentioned in files.
+1) Hosting app on the cloud
+2) If you need to temporarily disable access to your Heroku app (for example, to perform a large migration), you can enable Heroku’s built-in maintenance mode. While in maintenance mode, your app serves a static maintenance page to all visitors.
+3) Utilizing config variables on Heroku to protect credentials from being mentioned in files.
 
 ##### Commands:
 Enabling Maintenance mode:
@@ -19,5 +31,6 @@ $ heroku ps:scale web=0
 MongoDB cloud hosting using MongoDB Atlas
 
 #### Learnings:
-1) Used text-based indexing to optimize search queries
-2) Mongo Atlas has option for IP whitelisting - meaning only specific ip addresses are allowed to query the database.
+1) Hosting Database on the cloud
+2) Used text-based indexing to optimize search queries
+3) Mongo Atlas has option for IP whitelisting - meaning only specific ip addresses are allowed to query the database.
