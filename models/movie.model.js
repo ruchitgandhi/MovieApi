@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
-const MongoPaging = require('mongo-cursor-pagination');
+
+//Explored for paging
+//const MongoPaging = require('mongo-cursor-pagination');
 
 const Schema = mongoose.Schema;
 

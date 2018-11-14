@@ -18,7 +18,8 @@ exports.searchByName = function (req, res) {
     else{
         requestedPage = parseInt(req.query.pageNum);
     }
-
+    
+    //Advantages: Uses text indexing provided my MongoDB; Results are sorted based on relvancy to the query
     //Disadvantages: repeated search
     //Caching is needed - suggestion Redis
     Show.count({$text: {$search: req.query.query}}, function(err, totalCount){
@@ -55,6 +56,9 @@ exports.searchByName = function (req, res) {
     });
 };
 
+//Advantages : Uses text indexing by MongoDB for faster functioning
+//Disadvanatges : Does not allow sorting of results for relevancy in paginate function
+
 //exports.searchByName = function (req, res) {
 //    if(req.query.next && req.query.previous){
 //        res.send({message : "Invalid Request - Pass only one out of Next and Previous"});
@@ -84,6 +88,8 @@ exports.searchByName = function (req, res) {
 //        }
 //};
 
+
+//Disadvantages - Does not utilize indexing provided by MongoDB
 
 //exports.searchByName = function (req, res) {
 //    if(req.query.next && req.query.previous){

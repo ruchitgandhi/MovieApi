@@ -6,6 +6,7 @@ const app = express();
 const mongoose = require('mongoose');
 
 //For MongoDB Atlas - Cloud Hosting
+//Used environment variables on local and heroku config on cloud to securely pass credentials
 mongoose.connect('mongodb+srv://' + process.env.MONGODB_USERNAME + ':' + process.env.MONGODB_PASSWORD + '@cluster0-g5078.mongodb.net/movieDB?retryWrites=true', {useNewUrlParser : true});
 
 //For Local MongoDB Database
