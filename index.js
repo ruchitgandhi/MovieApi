@@ -39,40 +39,76 @@ app.listen(port, () => {
     console.log('Server is up and running on port number ' + port);
 });
 
+//Populate data into MongoDB using omdb-client
+
+/*
+var omdbClient = require('omdb-client');
+const Show = require('./models/movie.model');
+
+var keyword = ['saw','love', 'batman', 'flash', 'office', 'sunshine', 'stranger', 'day', 'lord', 'little', 'star', 'dark', 'jerry','noddy'];
+
+keyword.forEach(function(searchTerm){
+    var params = {
+        apiKey: process.env.OMDB_API_KEY,
+        query: searchTerm
+    }
+
+    omdbClient.search(params, function(err, movies) {
+        if(err) {
+            return console.error(err);
+        }
+
+        if(movies.Search.length > 0) {
+
+            movies.Search.forEach(function(movie){
+                var newShow = Show({
+                    Title: movie.Title,
+                    Year: movie.Year,
+                    Type: movie.Type,
+                    imdbID: movie.imdbID
+                });
+
+                newShow.save();
+            });
+        }
+    });
+
+});
+*/
 
 //Code to Populate Data into MongoDB
 
-//const http = require('http');
-//const Show = require('./models/movie.model');
+/*const http = require('http');
+const Show = require('./models/movie.model');
 
-//keywords used = love, batman, flash, office
-//const urldata = {
-//  host: 'omdbapi.com',
-//  port: '80',
-//  path: '/?apikey=<YOUR_API_KEY>&s=flash',
-//  method: 'GET'
-//};
-//
-//const req = http.request(urldata, function(res) {
-//  var data = '';
-//
-//  res.setEncoding('utf8');
-//  res.on('data', function(chunk) {
-//    data += chunk;
-//  });
-//  res.on('end', function() {
-//        var body = JSON.parse(data);
-//        body.Search.forEach(function(showEntry) {
-//            var newShow = Show({
-//            Title: showEntry.Title,
-//            Year: showEntry.Year,
-//            Type: showEntry.Type,
-//            imdbID: showEntry.imdbID
-//            });
-//
-//            newShow.save();
-//        }); 
-//  });
-//});
-//
-//req.end();
+keywords used = love, batman, flash, office
+const urldata = {
+  host: 'omdbapi.com',
+  port: '80',
+  path: '/?apikey=<YOUR_API_KEY>&s=flash',
+  method: 'GET'
+};
+
+const req = http.request(urldata, function(res) {
+  var data = '';
+
+  res.setEncoding('utf8');
+  res.on('data', function(chunk) {
+    data += chunk;
+  });
+  res.on('end', function() {
+        var body = JSON.parse(data);
+        body.Search.forEach(function(showEntry) {
+            var newShow = Show({
+            Title: showEntry.Title,
+            Year: showEntry.Year,
+            Type: showEntry.Type,
+            imdbID: showEntry.imdbID
+            });
+
+            newShow.save();
+        }); 
+  });
+});
+
+req.end();*/
