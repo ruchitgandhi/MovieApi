@@ -1,10 +1,6 @@
 # MovieApi
 REST API for fetching movie and tv series
 
-## Steps to run locally
-
-## Steps to run on cloud
-
 ## API Development
 
 #### Learnings:
