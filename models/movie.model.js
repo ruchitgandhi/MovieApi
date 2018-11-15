@@ -12,7 +12,7 @@ let showSchema = new Schema({
     imdbID: String
 });
 
-showSchema.plugin(MongoPaging.mongoosePlugin);
+//showSchema.plugin(MongoPaging.mongoosePlugin);
 
 // Export the model
 module.exports = mongoose.model('Show', showSchema);
